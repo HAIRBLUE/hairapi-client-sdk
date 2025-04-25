@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.hair.hairapiclientsdk.HairApiClientConfig
+#org.springframework.boot.autoconfigure.AutoConfiguration.imports
