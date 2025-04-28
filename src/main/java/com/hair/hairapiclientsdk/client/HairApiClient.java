@@ -70,4 +70,26 @@ public class HairApiClient {
         System.out.println(httpResponse.body());
         return httpResponse.body();
     }
+
+    public String getRandomNumberByPost(User user) {
+        String json = JSONUtil.toJsonStr(user);
+        HttpResponse httpResponse = HttpRequest.post(GATEWAY_HOST + "/api/random/number")
+                .addHeaders(getHeaderMap(json))
+                .body(json)
+                .execute();
+        System.out.println(httpResponse.getStatus());
+        System.out.println(httpResponse.body());
+        return httpResponse.body();
+    }
+
+    public String getRandomJokeByPost(User user) {
+        String json = JSONUtil.toJsonStr(user);
+        HttpResponse httpResponse = HttpRequest.post(GATEWAY_HOST + "/api/random/joke")
+                .addHeaders(getHeaderMap(json))
+                .body(json)
+                .execute();
+        System.out.println(httpResponse.getStatus());
+        System.out.println(httpResponse.body());
+        return httpResponse.body();
+    }
 }
